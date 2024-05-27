@@ -9,10 +9,13 @@ RUN apt-get update && apt-get install -y \
     unzip \
     zip \
     p7zip-full \
-    libzip-dev
+    libzip-dev \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev
 
-# تثبيت الامتداد zip لـ PHP
-RUN docker-php-ext-install zip
+# تثبيت الامتدادات المطلوبة لـ PHP
+RUN docker-php-ext-install zip pdo pdo_mysql gd
 
 # تثبيت Node.js 20
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
