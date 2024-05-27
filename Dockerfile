@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     zip \
-    p7zip-full
+    p7zip-full \
+    libzip-dev
 
 # تثبيت الامتداد zip لـ PHP
 RUN docker-php-ext-install zip
