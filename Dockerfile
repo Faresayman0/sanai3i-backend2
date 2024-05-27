@@ -1,5 +1,5 @@
-# استخدام صورة PHP الأساسية مع Apache
-FROM php:8.0-apache
+# استخدام صورة PHP الأساسية مع Apache والإصدار 8.1
+FROM php:8.2-apache
 
 # تثبيت المتطلبات الأساسية
 RUN apt-get update && apt-get install -y \
