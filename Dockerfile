@@ -1,10 +1,11 @@
 # استخدام صورة PHP الأساسية مع Apache والإصدار 8.1
-FROM php:8.2-apache
+FROM php:8.1-apache
 
 # تثبيت المتطلبات الأساسية
 RUN apt-get update && apt-get install -y \
     curl \
-    gnupg
+    gnupg \
+    git
 
 # تثبيت Node.js 20
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
