@@ -24,9 +24,6 @@ RUN composer install
 RUN npm install
 RUN npm run build
 
-# تشغيل الترحيلات
-RUN php artisan migrate --force
-
 # تعريض المنفذ 80
 EXPOSE 80
 
