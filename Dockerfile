@@ -5,7 +5,13 @@ FROM php:8.1-apache
 RUN apt-get update && apt-get install -y \
     curl \
     gnupg \
-    git
+    git \
+    unzip \
+    zip \
+    p7zip-full
+
+# تثبيت الامتداد zip لـ PHP
+RUN docker-php-ext-install zip
 
 # تثبيت Node.js 20
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
