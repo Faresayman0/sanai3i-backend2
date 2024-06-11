@@ -12,7 +12,7 @@ Route::get('/test-db', function () {
         DB::connection()->getPdo();
         return 'Connected successfully to the database!';
     } catch (\Exception $e) {
-        return 'Could not connect to the database. Error: ' . $e->getMessage();
+        return 'Could not connect to the database. Error: fares ' . $e->getMessage();
     }
 });
 
