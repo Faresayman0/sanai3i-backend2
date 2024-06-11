@@ -33,7 +33,6 @@ WORKDIR /var/www/html
 RUN composer install
 RUN npm install
 RUN npm run build
-RUN php artisan migrate:install
 # تعريض المنفذ 80
 EXPOSE 80
 
